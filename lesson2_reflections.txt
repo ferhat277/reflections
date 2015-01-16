@@ -1,0 +1,16 @@
+##### what happens when you initialize a repository? why do you need to do it?
+
+you create a file .git. i think this file creates a connection to the git repository.
+
+######
+
+######    how is the staging area different from the working directory and the repository? what value do you think it offers?    ##########
+
+the staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit. it's sometimes referred to as the "index", but it's also common to refer to it as the staging area.
+
+The basic Git workflow goes something like this:
+	1. You modify files in your working directory.
+	2.Yiu stage the files, adding snapshors of them to your stafinf area.
+	3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+
+	
