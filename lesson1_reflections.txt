@@ -1,0 +1,80 @@
+###
+git diff is a command on terminal for both mac and unix-like computers.
+	it stands for difference (i guess)
+	it compares two files and shows the differences
+
+	the usage is:
+
+	diff -u old_file_name new_file_name
+
+git log shows the commits made in a repository, starting with the most recent
+	prompt > git log
+
+git clone makes a copy of an entire Git repository, including the history, onto your own computer
+	prompt > git clone URL
+
+git checkout temporarily resets all files in a repository to their state at the time of a specific commit
+	prompt > git checkout -- <FILE>
+
+git init
+
+	this is the comment to initialize the file you want to make a repository. 
+	ls -a will show .git file 
+
+git status shows the status of your file.
+
+
+
+
+Q-- How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+it is really helpful to go to the older versions of your file. if you encounter a bug, you can go back and see older versions to get rid of the bug and you can also use diff command to check the differences. The other thing is you can re-use older versions if you decide not to use the newer versions.
+
+Q-- What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?
+
+we might forget to save files after doing some important changes. So having versions automatically saved can save our life ;-)
+If it saves every often, this creates a lot of files and this might be frustrating when we need to look at the history.
+
+Q-- Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+well, it is a good way to track multiple files for programmers.
+
+Q-- How can you use the commands git log and git diff to view the history of files?
+
+git log: opens the commit history, it shows ids and also what is the name of the change.
+git diff: gives the difference between two commits 
+git diff old_file_id new_file_id
+
+#####   HOW TO SET UP GIT WORKSPACE ON MAC   
+        -Assosiating text editors with GIT-      ######
+
+first of all, this changes terminal workspace, interface. it makes it colorfull and easy to distinguish words in this way. 
+
+- there is two files we need save in our home directory:
+
+https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+
+https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
+name the first file as: git-completion.bash (the extention is gonna be .txt)
+
+name the second file as: git-prompt.sh (the extention is .txt)
+
+then download .bash_profile file and move it to your home directory.
+
+if you use sublime, you should add the following into your .bash_profile file:
+alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+
+run the following commands on terminal (first line is for sublime):
+
+git config --global core.editor "subl -n -w"
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
+
+if you use other editor make web search to file the right one for git editor configuration(https://help.github.com/articles/associating-text-editors-with-git/).
+
+then RESTART the terminal. 
+
+%%%%%%%%%% Now that you have your workspace set up, what do you want to try using Git for?   %%%%%%%%%%% 
+
+i wanna use git fo version control for now. it probably has more options but this is what i know so far.
