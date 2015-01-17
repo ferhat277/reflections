@@ -7,6 +7,8 @@ git diff is a command on terminal for both mac and unix-like computers.
 
 	diff -u old_file_name new_file_name
 
+	if you just type git diff, that shows the latest changes you have made without adding them to the staging area.
+
 git log shows the commits made in a repository, starting with the most recent
 	prompt > git log
 
@@ -23,7 +25,33 @@ git init
 
 git status shows the status of your file.
 
+git add "this adds the changes you made to the staging area"
 
+git commit 'this creates a new id since it is saved for the last time.'
+
+** I think git add adds files to the .git files and we run git commit to create an ID for the current version. **
+
+git diff --staged
+
+git reset --hard
+
+BRANCHES: this is how we create a copy of the current project. it is good to make a branch if you are going to mess around or make an unrelated chenges or try out something new. The another reason might be different branches or subjects can be split by a team. in this way, we dont change the original project. 
+
+some brach commands:
+
+git branch a_name_for_branch   --> This creates a new brach. Note that we have to be in the directory that we want to create a branch.
+
+git checkout the_name_for_branch    --> This is needed to go to the file.
+
+we can also combine these two commands as:   git checkout -b a_name_for_branch
+
+Then we are in the brach directory and we can make changes without infering the original project.
+
+git log --graph --oneline master <branch1_name> <branch2_name> ...   --> this visualizes the commit history and showing changes made on branch(es)
+
+gitHUB
+
+git remote add origin <link>   --> this commands allows gitHUB to upload files to the website so that everyone can see it.
 
 
 Q-- How could having easy access to the entire history of a file make you a more efficient programmer in the long term?

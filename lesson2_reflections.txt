@@ -10,7 +10,12 @@ the staging area is a file, generally contained in your Git directory, that stor
 
 The basic Git workflow goes something like this:
 	1. You modify files in your working directory.
-	2.Yiu stage the files, adding snapshors of them to your stafinf area.
+	2. You stage the files, adding snapshors of them to your stafinf area.
 	3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
 
-	
+
+#### How can you use the staging area to make sure you have one commit per logical change? ########
+
+staging area is where the commits are stored. so if we want to make sure we have one commit per logical change, we need to 
+
+
