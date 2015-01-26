@@ -21,7 +21,7 @@ git checkout temporarily resets all files in a repository to their state at the 
 git init
 
 	this is the comment to initialize the file you want to make a repository. 
-	ls -a will show .git file 
+	ls -a will show .git file and some more hidden files
 
 git status shows the status of your file.
 
@@ -35,19 +35,40 @@ git diff --staged
 
 git reset --hard
 
+git reset HEAD^ --soft   -->  saves your changes and back to last commit
+git reset HEAD^ --hard   -->  discards changes and back to last commit
+
 BRANCHES: this is how we create a copy of the current project. it is good to make a branch if you are going to mess around or make an unrelated chenges or try out something new. The another reason might be different branches or subjects can be split by a team. in this way, we dont change the original project. 
 
-some brach commands:
+some BRANCH commands:
 
 git branch a_name_for_branch   --> This creates a new brach. Note that we have to be in the directory that we want to create a branch.
 
 git checkout the_name_for_branch    --> This is needed to go to the file.
 
-we can also combine these two commands as:   git checkout -b a_name_for_branch
+git checkout -b a_name_for_branch    -->we can also combine these two commands.
 
 Then we are in the brach directory and we can make changes without infering the original project.
 
 git log --graph --oneline master <branch1_name> <branch2_name> ...   --> this visualizes the commit history and showing changes made on branch(es)
+
+git merge branch1 branch2     --> merges two branches together
+
+git merge --abord    --> restore your files to their state before you started the merge
+
+git branch -d <branch_name_that_is_merged>   --> this will delete the lable name of the merged branch. this is necessary after merging.
+
+git show <commit_id>  is an important command after merging branches because it shows the difference that is made with its parrent. Because when we merge two branches git log shows the commits based on the time they are created and it makes it hard to keep track of seeing differences between two commits and this command can be used for that.
+
+DEALING WITH CONFLICTS AFTER MERGING: 
+
+<<<<<<< HEAD    --> shows your version of code
+
+||||||| merged common ancestors    --> shows the original piece of code
+
+=======
+        piece of code for the other merged file
+>>>>>>> master
 
 gitHUB
 

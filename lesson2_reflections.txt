@@ -19,3 +19,15 @@ The basic Git workflow goes something like this:
 staging area is where the commits are stored. so if we want to make sure we have one commit per logical change, we need to 
 
 
+#### How do the diagrams help you visualize the branch structure?  #####
+
+we can see where the branches started and explain the reachability. 
+
+#### What is the result of merging two branches together? Why do we represent it in the diagram the way we do? #####
+
+well, this merges the changes that we made for two branches and we can get the properties of the merged branches. we represent it in the diagram because we can see that there were two branches that are merged and this will also help us how to get back in the history with the commit id.
+
+#####  What are the pros and cons of Git's automatic merging vs. always doing merges manually?  ########
+
+i didnt get why there should be automatic merges. because adding new branch might be for different reasons. it might experimental or a new feature that you failed at the end and you probably dont want it to be saved.
+
